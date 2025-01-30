@@ -1,0 +1,2849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <title>Nivelamento - Língua Portuguesa Nivel 1 - Unidade 5</title>
+<style>
+    /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+        /* Estilização de Roboto FIM */
+
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/f_auto,q_auto/v1733243815/ImagemBG-8_wxd0x5.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Estilo do ícone de citação */
+        .quote-icon {
+            font-size: 40px; /* Tamanho do ícone */
+            color: #015A42; /* Cor do ícone */
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+            flex-shrink: 0; /* Garante que o ícone não diminua */
+        }
+
+        /* Container do parágrafo com ícone */
+        .quote-paragraph {
+            display: flex; /* Alinha o ícone e o texto lado a lado */
+            align-items: flex-start; /* Alinha verticalmente ao topo */
+            margin-top: 30px auto; /* Espaço superior */
+            width: 100%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Parágrafo do conteúdo */
+        .quote-paragraph p {
+            font-size: 16px; /* Tamanho do texto */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            flex: 1; /* Faz o parágrafo ocupar o espaço restante */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .quote-paragraph {
+                flex-direction: row; /* Mantém ícone e texto lado a lado */
+                align-items: flex-start; /* Alinha ícone ao topo do texto */
+                text-align: justify; /* Garante alinhamento justificado no texto */
+            }
+
+            .quote-icon {
+                font-size: 35px;
+                margin-right: 10px; /* Remove margem lateral */
+            }
+
+            .quote-paragraph p {
+                font-size: 14px; /* Reduz o tamanho do texto */
+                line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+            }
+        }
+        .text-right {
+            float: right; /* Alinha o texto à direita */
+            text-align: right; /* Garante que o conteúdo interno também esteja alinhado à direita */
+            font-size: inherit; /* Herda o tamanho da fonte do parágrafo */
+            font-family: inherit; /* Herda a fonte do parágrafo */
+            color: inherit; /* Herda a cor do parágrafo */
+            font-size: 16px;
+            
+        }
+        .text-green {
+            color: #015A42;
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .secao1 p {
+                font-size: 0.6rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.8rem;
+            }
+
+            .secao1 p {
+                font-size: 1.5rem;
+            } 
+        }
+        /* Tabs container */
+        .tabs-container2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: calc(90% - 10px); /* Subtrai o gap total da largura */
+            max-width: 800px; /* Limite máximo */
+            font-weight: bold;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 5px;
+            box-sizing: border-box; /* Garante que padding e largura sejam incluídos no cálculo */
+        }
+
+        .tab2{
+            flex-grow: 1;  /* Impede que as abas cresçam para ocupar todo o espaço */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o conteúdo e o ícone */
+            justify-content: space-between; /* Texto à esquerda e ícone à direita */
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Para suavizar as bordas dos Tabs */
+            background-color: #9F43BE; /* Cor de fundo violeta para os tabs */
+        }
+                /* Ajustes do ícone no tab */
+        /* Ícone no final do Tab */
+        .icon-wrapper {
+            margin-left: auto; /* Garante que o ícone vá para o fim do tab */
+        }
+
+        .tab2 i {
+            font-size: 18px;
+            color: #ffffff; /* Cor padrão do ícone */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .tab2:hover i {
+            color: #9669a5; /* Altera a cor no hover */ 
+            transform: scale(1.2); /* Amplia o ícone no hover */
+        }
+        @media (max-width: 480px) {
+            .tab2 i {
+                font-size: 16px; /* Ícone menor para mobile */
+            }
+        }
+        .tab2:hover {
+            background-color: #9f43be7c; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o conteúdo dos Tabs */ 
+        .tab-content2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            background-color: #FFF;
+            display: none; /* Inicialmente escondido */
+            box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura */
+            width: 90%; /* Consistência com outras seções */
+            max-width: 800px; /* Limite máximo */
+            margin-left: auto; /* Centraliza horizontalmente */
+            margin-right: auto; /* Centraliza horizontalmente */
+            height: auto;
+        }
+
+        .tab-content2 p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Tab ativo */
+        .tab2.active {
+            background-color: #9f43be7c; /* Cor mais escura para indicar o ativo */
+            color: #FFFFFF; /* Mantém o texto em branco */
+            font-weight: bold; /* Destaca o texto */
+        }
+        /* Tabs container */
+        .tabs-container3 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: calc(90% - 10px); /* Subtrai o gap total da largura */
+            max-width: 800px; /* Limite máximo */
+            font-weight: bold;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 5px;
+            box-sizing: border-box; /* Garante que padding e largura sejam incluídos no cálculo */
+        }
+
+        .tab3{
+            flex-grow: 1;  /* Impede que as abas cresçam para ocupar todo o espaço */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o conteúdo e o ícone */
+            justify-content: space-between; /* Texto à esquerda e ícone à direita */
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Para suavizar as bordas dos Tabs */
+            background-color: #015A42; /* Cor de fundo violeta para os tabs */
+        }
+                /* Ajustes do ícone no tab */
+        /* Ícone no final do Tab */
+        .icon-wrapper {
+            margin-left: auto; /* Garante que o ícone vá para o fim do tab */
+        }
+
+        .tab3 i {
+            font-size: 18px;
+            color: #ffffff; /* Cor padrão do ícone */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .tab3:hover i {
+            color: #015A42; /* Altera a cor no hover */ 
+            transform: scale(1.2); /* Amplia o ícone no hover */
+        }
+        @media (max-width: 480px) {
+            .tab3 i {
+                font-size: 16px; /* Ícone menor para mobile */
+            }
+        }
+        .tab3:hover {
+            background-color: #015a426c; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o conteúdo dos Tabs */ 
+        .tab-content3 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            background-color: #FFF;
+            display: none; /* Inicialmente escondido */
+            box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura */
+            width: 90%; /* Consistência com outras seções */
+            max-width: 800px; /* Limite máximo */
+            margin-left: auto; /* Centraliza horizontalmente */
+            margin-right: auto; /* Centraliza horizontalmente */
+            height: auto;
+        }
+
+        .tab-content3 p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Tab ativo */
+        .tab3.active {
+            background-color: #015A42; /* Cor mais escura para indicar o ativo */
+            color: #FFFFFF; /* Mantém o texto em branco */
+            font-weight: bold; /* Destaca o texto */
+        }
+        .fonte-menor {
+            font-size: 15px; /* Tamanho menor */
+            font-style: italic; /* Opcional: estilização adicional */
+            color: #000; /* Opcional: cor mais discreta */
+        }
+
+        .fonte-under{
+            text-decoration: underline;
+            font-weight: bold;
+            color: #000; /* Opcional: cor mais discreta */
+        }
+        .fonte-undernormal{
+            text-decoration: underline;
+        }
+        .small-frame {
+    border: 2px solid #9F43BE;
+    border-radius: 10px;
+    padding: 15px 20px; /* Maior espaçamento interno para melhor legibilidade */
+    width: 80%; /* Usa um tamanho mais fluido */
+    max-width: 700px;
+    background-color: #FFF;
+    height: auto;
+    margin: 30px auto; /* Centraliza e ajusta margem superior */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+}
+
+.small-frame p {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    line-height: 1.8; /* Maior espaçamento entre linhas */
+    text-align: justify;
+    margin: 0; /* Remove margem lateral desnecessária */
+    padding: 5px 10px; /* Melhor espaçamento interno */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .small-frame {
+        width: 90%; /* Mais largura para ocupar melhor a tela */
+        padding: 15px;
+    }
+
+    .small-frame p {
+        font-size: 14px; /* Mantém boa leitura */
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .small-frame {
+        width: 95%; /* Usa quase toda a tela para não ficar apertado */
+        padding: 10px;
+    }
+
+    .small-frame p {
+        font-size: 13px; /* Mantém o texto confortável */
+        line-height: 1.6;
+    }
+}
+
+        .small-frameg {
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90%; /* Usa 90% da largura do contêiner */
+            max-width: 700px; /* Define limite máximo */
+            background-color: #FFF;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .small-frameg p {
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 10px 30px;
+        }
+
+
+        /* Responsividade */
+@media (max-width: 768px) {
+    .small-frameg {
+        width: 90%; /* Mais largura para ocupar melhor a tela */
+        padding: 15px;
+    }
+
+    .small-frameg p {
+        font-size: 14px; /* Mantém boa leitura */
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .small-frameg {
+        width: 95%; /* Usa quase toda a tela para não ficar apertado */
+        padding: 10px;
+    }
+
+    .small-frameg p {
+        font-size: 13px; /* Mantém o texto confortável */
+        line-height: 1.6;
+    }
+}
+
+         /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.8rem;
+            }
+
+            .secao2 p {
+                font-size: 1.5rem;
+            } 
+        }
+        /* Container dos novos accordions */
+        .accordion-container-diferente {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo do accordion */
+        .accordion-diferente {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        /* Cabeçalho do accordion */
+        .accordion-header-diferente {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #015A42; /* Cor de fundo exclusiva */
+            color: #fff; /* Cor do texto */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Ícone no cabeçalho */
+        .accordion-icon-diferente {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Transição para rotação */
+        }
+
+        /* Conteúdo do accordion */
+        .accordion-content-diferente {
+            display: none;
+            padding-top: 0;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            background-color: #FFF; /* Fundo mais claro */
+            border: 2px solid #015A42; /* Cor da borda combinando */
+            border-radius: 0 0 10px 10px; /* Apenas cantos inferiores arredondados */
+        }
+
+        .accordion-content-diferente p {
+            margin: 20px;
+            max-width: 800px;
+            font-size: 16px;
+        }
+        @media (max-width: 480px) {
+        .accordion-content-diferente p {
+            font-size: 16px;
+            margin: 10px;
+            }
+        }
+
+        /* Rotação do ícone */
+        .accordion-header-diferente.active .accordion-icon-diferente {
+            transform: rotate(180deg);
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 100px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        /* Contêiner dos flip cards */
+        .flip-card-container {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os cards */
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* Estilo geral do flip card */
+        .flip-card {
+            width: 150px;
+            height: 150px;
+            perspective: 1000px; /* Adiciona a perspectiva 3D */
+            margin: 10px;
+        }
+
+        /* Parte interna do flip card */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        /* Front e Back dos cards */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Face da frente */
+        .flip-card-front {
+            background-color: #9F43BE;
+            color: white;
+        }
+
+        /* Face de trás */
+        .flip-card-back {
+            background-color: white;
+            color: #333;
+            transform: rotateY(180deg);
+            font-size: 14px;
+        }
+
+        /* Efeito de rotação ao passar o mouse */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+       @media (max-width: 768px) {
+    .flip-card-containerg {
+        display: flex;
+        flex-wrap: wrap; /* Permite a quebra de linha */
+        justify-content: center; /* Centraliza os cards */
+        gap: 10px; /* Espaçamento entre os cards */
+        padding: 10px;
+        width: 100%; /* Garante que o container não estoure a tela */
+        box-sizing: border-box; /* Evita que padding afete a largura total */
+    }
+
+    .flip-cardg {
+        width: 45%; /* Cada card ocupa 45% da largura, cabendo dois por linha */
+        max-width: 160px; /* Mantém um limite de tamanho */
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flip-card-container {
+        flex-wrap: wrap; /* Permite que os cards quebrem linha */
+        justify-content: center; /* Centraliza os itens */
+        gap: 15px; /* Aumenta o espaçamento entre os cards */
+    }
+
+    .flip-card {
+        width: 120px; /* Reduz a largura do card */
+        height: 120px; /* Reduz a altura do card */
+        margin: 5px; /* Ajusta as margens */
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        font-size: 12px; /* Reduz o tamanho do texto */
+        padding: 8px; /* Ajusta o espaçamento interno */
+    }
+}
+
+        /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 90%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */            
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+        }
+                .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 14px;
+            }
+        }
+        /* Quadro com borda violeta */
+        .quadrov {
+            padding: 20px; /* Espaçamento interno */
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Largura máxima */
+            margin-bottom: 30px; /* Espaçamento inferior */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-bottom: 20px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadrov {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+                            /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9F43BE;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #9F43BE;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-content p {
+            margin: 10px;
+            font-size: 16px
+        }
+
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 19px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+        /* SEÇÃO FIQUE ATENTO! */
+        .alert-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9F43BE; /* Cor de fundo violeta */
+            padding: 20px 10px; /* Espaçamento uniforme superior e inferior */
+            margin: 0; /* Remover margens externas */
+        }
+
+        .alert-container {
+            width: 90%;
+            max-width: 800px; /* Limite máximo de largura */
+            margin: 0 auto; /* Centralizar horizontalmente */
+            padding: 0; /* Garantir que o container interno não tenha espaçamento adicional */
+        }
+
+        .alert-title {
+            color: #FFF; /* Cor branca */
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            margin: 0 0 20px 0; /* Garantir que o título não afete margens desnecessárias */
+        }
+
+        .alert-paragraph {
+            color: #FFF; /* Cor branca */
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            font-size: 18px; /* Tamanho do texto */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            margin: 0; /* Remover margens inferiores adicionais */
+            text-align: justify;
+        }
+                /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .alert-title {
+                font-size: 40px; /* Reduzir tamanho do título */
+                margin-bottom: 15px; /* Ajustar espaçamento inferior */
+            }
+
+            .alert-paragraph {
+                font-size: 16px; /* Reduzir tamanho do texto */
+                line-height: 1.5; /* Ajustar espaçamento entre linhas */
+                text-align: left; /* Alinhar à esquerda para facilitar leitura em telas menores */
+            }
+
+            .alert-section {
+                padding: 15px 5px; /* Reduzir espaçamento superior e inferior */
+            }
+        }
+        /* Contêiner dos flip cards */
+        .flip-card-containerg {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os cards */
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* Estilo geral do flip card */
+        .flip-cardg {
+            width: 150px;
+            height: 150px;
+            perspective: 1000px; /* Adiciona a perspectiva 3D */
+            margin: 10px;
+        }
+
+        /* Parte interna do flip card */
+        .flip-card-innerg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        /* Front e Back dos cards */
+        .flip-card-frontg,
+        .flip-card-backg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Face da frente */
+        .flip-card-frontg {
+            background-color: #015A42;
+            color: white;
+        }
+
+        /* Face de trás */
+        .flip-card-backg {
+            background-color: white;
+            color: #333;
+            transform: rotateY(180deg);
+            font-size: 14px;
+        }
+
+        /* Efeito de rotação ao passar o mouse */
+        .flip-cardg:hover .flip-card-innerg {
+            transform: rotateY(180deg);
+        }
+         /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #015A42; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 50px;
+            box-sizing: border-box;
+            white-space: normal; /* Permite que o texto ocupe várias linhas */
+            word-wrap: break-word; /* Força quebra de palavras longas, se necessário */
+            overflow-wrap: break-word; /* Alternativa para forçar a quebra */
+        }
+
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #015A42; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #015a427e; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #9F43BE; /* Fundo neutro */
+            border-top: 5px solid #600180;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #9F43BE; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #FFF;
+            margin-bottom: 15px;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 35px; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao2">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 1</h1>
+            <h2 class="subtitulo-professor">PROFª VALERIA SILVA ROSA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 5 | ORGANIZADORES TEXTUAIS – PARAGRAFAÇÃO</h1>
+        </div>
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá estudante!</p>
+                <p>
+                    Antes de iniciarmos a explicação dos <strong>ORGANIZADORES TEXTUAIS</strong>, é fundamental tomarmos
+                    conhecimento de dois recursos extremamente importantes na produção textual – <strong>A COERÊNCIA e a
+                    COESÃO.</strong> Essas ferramentas, ao funcionarem juntas, garantem a fluidez, permitindo que o leitor estabeleça
+                    conexões claras e significativas com o conteúdo apresentado.
+                </p>
+                <p>
+                    Já a paragrafação por outro lado, muito mais do que organizar visualmente o texto, contribui para a clareza
+                    e a lógica das ideias apresentadas, estabelecendo um fluxo que facilita a leitura e a compreensão. Cada
+                    parágrafo representa uma unidade de sentido, desenvolvendo uma ideia central com base em argumentos
+                    ou informações complementares.
+                </p>
+                <p>Compreender a importância dessa organização é essencial para quem deseja produzir textos bem estruturados.
+                Nesta unidade, exploraremos os principais aspectos da paragrafação, incluindo sua definição, estrutura
+                e exemplos práticos. Além disso, discutiremos como essa ferramenta pode ser utilizada para fortalecer a
+                coerência e a coesão de um texto, garantindo que cada ideia seja apresentada de forma clara e objetiva.</p>
+                <p>Vamos aos estudos!</p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <!-- Título da seção -->
+        <h1>1. COERÊNCIA TEXTUAL</h1>
+        
+        <!-- Parágrafos -->
+        <p>
+            Você sabe de onde vem o termo coerência? A coerência é um termo da filosofia, mais especificamente da
+            lógica e vem do latim cohaerentia - ae e <strong>significa “ligação ou harmonia entre situações, acontecimentos
+            ou ideias”</strong>. Ela se estabelece na dependência do conhecimento de elementos linguísticos, do conhecimento
+            de mundo, do conhecimento partilhado entre o emissor (quem escreve) e o receptor (quem lê) do texto e
+            de fatores sociais.
+        </p>
+        <p>
+            Ela é a característica daquilo que tem lógica e coesão, quando um conjunto de ideias apresenta nexo
+            e uniformidade e uma continuação lógica, apresentadas ao longo da narrativa, em uma sequência que
+            dê um sentido geral e lógico ao receptor (leitor), de forma que não haja contradições ou dúvidas acerca
+            do assunto, a fim de este se torne compreensível e faça sentido para quem está lendo. Além disso, ela
+            consiste em como aplicar cada palavra em um texto para que este tenha a intencionalidade pretendida.
+        </p>
+        <p>
+            Recentemente, uma revista americana promoveu um concurso, pedindo a seus leitores que enviassem
+            mensagens estranhas divulgadas por seus gerentes, no ambiente de trabalho. O texto que você encontra,
+            a seguir, foi a mensagem vencedora:
+        </p>
+        <!-- parágrafo com citação -->
+        <div class="quote-paragraph">
+            <p><span class="text-right">
+                “A partir de amanhã, os empregados somente poderão acessar o prédio usando cartões de
+                segurança individuais. As fotografias serão tiradas na próxima quarta-feira, e os empregados
+                receberão seus cartões em duas semanas”. (Fred Dales, Microsoft, Redmond, WA)
+            </span></p>
+        </div>
+        <p>
+            Por que esta mensagem é estranha? A resposta é simples: é porque ela é uma mensagem incoerente.
+            Afinal, a empresa não pode exigir que os empregados apresentem cartão de identificação duas semanas
+            antes de disponibilizá-los. Existe, neste texto, uma contradição, uma incoerência. O texto, portanto, não
+            pode fazer sentido para aqueles que o leem.
+        </p>
+        <p>
+            Verifiquem mais alguns exemplos, clicando nos botões para ler os textos:
+        </p>
+        <!-- Tabs -->
+        <div class="tabs-container2">
+            <div class="tab2" data-tab="tabb1">
+                TEXTO 1
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+            <div class="tab2" data-tab="tabb2">
+                TEXTO 2
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+    
+        </div>
+        <!-- Conteúdo dos Tabs -->
+        <div class="tab-content2" id="tabb1">
+            <p>
+                <strong>
+                    CANADÁ EM SÃO PAULO
+                </strong><br><br>
+                <strong>
+                    Parque canadense será inaugurado hoje.
+                </strong><br><br>
+                <span class="fonte-menor">São Paulo ganha hoje um parque que reúne
+                duas grandes “paixões” do paulistano:
+                o verde e a água. O verde está na farta
+                arborização do novo local de lazer: 2100
+                árvores, de 120 espécies diferentes. E a
+                água está no lago que recobre 70% dos 110
+                mil metros quadrados de área do parque
+                chamado Cidade de Toronto, batizado com
+                este nome graças ao Programa Municipal
+                de Intercâmbio Profissional firmado entre
+                São Paulo e Toronto – que doou parte das
+                verbas necessárias à sua construção – o
+                parque, situado na zona Oeste, presta uma
+                homenagem à cidade canadense.</span>
+            </p>
+        </div>
+        <div class="tab-content2" id="tabb2" style="display: none;">
+            <p>
+                <strong>
+                    Magnífico Reitor da Universidade de
+                    São Paulo
+                </strong><br><br>
+                <span class="fonte-menor">Tendo tomado conhecimento pelos
+                periódicos da capital paulista de que o
+                Prefeito da Cidade Universitária, onde
+                está situada a Universidade que Vossa
+                Magnificência, com alto descortino, dirige,
+                resolveu interditar o acesso da população
+                ao campus nos finais de semana, ouso
+                vir à presença de Vossa Magnificência
+                para manifestar meu repúdio ao fato de
+                uma instituição pública querer subtrair
+                da população de uma cidade desumana
+                um espaço de lazer. <strong>Francamente,
+                achei a maior sujeira da parte da USP,
+                sacanagem, nada a ver.</strong></span>
+            </p>
+        </div>
+        <p>
+            Se você verificar, no texto 1, o título não tem coerência com o texto, pois à primeira vista como “Canadá”
+            pode vir para “São Paulo” ou caber em São Paulo? O título, portanto, é incoerente. Após lermos o texto,
+            conseguimos entender. Já no texto 2, esse exemplo traz uma incoerência de linguagem. No início,
+            observamos um vocabulário coerente com a posição de um Reitor da Universidade. No final, porém ela
+            se torna extremamente incoerente, sem lógica dada a situação existente.
+        </p>
+        <div class="small-frame">
+            <p>
+                A coerência faz com que o texto faça sentido para os leitores. Ela diz respeito à possibilidade
+                de estabelecer, no texto, alguma forma de unidade ou relação. É ela que permite identificar o
+                texto como uma unidade de sentido. Ela está ligada, portanto, ao texto como um todo.
+            </p>
+        </div>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>2. COESÃO TEXTUAL</h1>
+        <p>
+            A coesão é a ligação harmoniosa entre duas partes, utilizada na gramática como forma de obter
+            um texto claro e compreensível. Ela consiste no uso correto das articulações gramaticais e conectivos
+            (conjunções, articuladores textuais), preposições, alguns advérbios (inicialmente, enfim, primeiramente,
+            fielmente, levemente, entre outros) e locuções adverbiais (do mesmo modo, em excesso, com certeza, entre
+            outras), que permitem a ligação harmoniosa entre as frases, orações, períodos e parágrafos de um texto.
+        </p>
+        <p>
+            A ausência de coesão é um dos principais problemas da construção de textos, pois revela desordem nas
+            ideias e dificulta a compreensão do leitor. Assim, quando os mecanismos de coesão textual não são bem
+            utilizados, seja dentro do período, seja entre os períodos ou parágrafos, o texto fica prejudicado.
+            <br><br>
+            Considere os exemplos abaixo <span class="fonte-menor">
+                (clique nos botões para visualizar):
+                </span>
+        </p>
+        <!-- Outro grupo de Tabs -->
+        <div class="tabs-container3">
+            <div class="tab3" data-tab="tabx1">
+                EXEMPLO 1
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i></span>
+            </div>
+            <div class="tab3" data-tab="tabx2">
+                EXEMPLO 2
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+        </div>
+        
+        <!-- Conteúdo do outro grupo de Tabs -->
+        <div class="tab-content3" id="tabx1" style="display: none;">
+            <p>
+                <span class="fonte-menor">
+                    A maioria dos professores, de qualquer
+                    grau, concorda que os alunos não leem,
+                    não gostam de ler e têm dificuldades
+                    para compreender o texto escrito.<br>
+                    Muitos relutam em assumir sua parcela
+                    de responsabilidade na formação do
+                    aluno leitor.<br>
+                    A escola deveria ser o local de
+                    “aprendizado da leitura” por
+                    excelência.<br>
+                    A escola usa o texto fragmentado (muitas
+                    vezes sem referência de título e autor).<br>
+                    O texto aparece no livro didático apenas
+                    como escada para o ensino de gramática.<br>
+                    O professor, na verdade, acaba
+                    “ensinando” que a leitura é uma atividade
+                    chata, inútil e que provoca sofrimento.
+                </span>
+            </p>
+        </div>
+        <div class="tab-content3" id="tabx2" style="display: none;">
+            <p>
+                <span class="fonte-menor">
+                    A maioria dos professores, de
+                    qualquer grau, concorda que os
+                    alunos não leem, não gostam de ler
+                    e têm dificuldades para compreender
+                    o texto escrito, <span class="fonte-under">porém</span> muitos
+                    relutam em assumir sua parcela de
+                    responsabilidade na formação do aluno
+                    leitor. <span class="fonte-under">Assim</span>, a escola, <span class="fonte-under">que</span> deveria
+                    ser o local de “aprendizado da leitura”
+                    por excelência, acaba atuando ao
+                    contrário: ao usar o texto fragmentado
+                    (muitas vezes sem referência de título
+                    e autor) <span class="fonte-under">que</span> aparece no livro didático
+                    apenas como escada para o ensino
+                    de gramática, o professor, na verdade,
+                    acaba “ensinando” que a leitura é uma
+                    atividade chata, inútil e que provoca
+                    sofrimento.
+                </span>
+            </p>
+        </div>
+        <p>
+            O exemplo 1 embora seja possível perceber de modo vago que as frases acima se referem ao assunto
+            “leitura”, não podemos dizer que elas fazem muito sentido. Algumas parecem soltas e não fazem parte
+            de um conjunto. Não é possível perceber qual a relação de sentido que existe entre elas. Portanto, esse
+            conjunto de frases <span class="fonte-undernormal">não constitui um texto. É um aglomerado de ideias sem muito sentido.</span>
+        </p>
+        <p>
+            Agora, no exemplo 2, podemos perceber que as frases estão interligadas umas às outras. Esse conjunto
+            de frases constitui um texto. Não se trata de frases soltas, sem conexão, sem ligação, sem <span class="fonte-undernormal">coesão</span>.<br><br>
+            Portanto a <strong>coesão é a ligação, a conexão que ocorre entre os vários enunciados que compõem um texto.</strong><br><br>
+            Mais alguns esclarecimentos <span class="fonte-menor">(clique para expandir):</span>
+        </p>
+        <!-- Accordions -->
+        <div class="accordion-container-diferente">
+            <!-- Primeiro Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    CLAREZA
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        As ideias devem ser expressas de tal forma que não deixem margem a dúvidas.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    CONCISÃO
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        Dizer exatamente o que se quer transmitir, evitando minúcias desnecessárias.
+                    </p>
+                </div>
+            </div>
+            <!-- Segundo Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    PRECISÃO
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        Empregar palavras que tenham sentido exato.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>
+            Resumindo, a coesão pode ser obtida por meio de <strong>conjunções</strong> – palavras que ligam orações em um
+            período composto. Ao ligar orações, as conjunções estabelecem entre elas uma <strong>relação de sentido</strong>,
+            argumentação de opiniões, apresentando ideias que têm como objetivo convencer o leitor da validade da
+            ideia central, usando para tanto mecanismos que ligam as sentenças umas às outras. Esses mecanismos
+            são chamados de organizadores textuais.
+        </p>
+    </section>
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                Está pronto para dar sentido e fluidez aos seus textos? Assista o vídeo a seguir e
+                entenda como dominar coesão e coerência!
+                <br>
+            </p>
+            
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/IIU6i3UXyi0?si=xWW6tBuizXo4PQj4"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>
+            3. ORGANIZADORES TEXTUAIS (ou CONJUNÇÕES ou ARTICULADO
+            RES SINTÁTICOS ARGUMENTATIVOS)
+        </h1>
+        <p>
+            Agora que você já aprendeu sobre coesão e coerência textual, fica fácil de perceber que a coesão deixa de
+            existir quando a conjunção empregada não corresponde à relação existente entre as orações do período.
+            Nesse caso, a construção também perderá sua coerência, ou seja, seu sentido lógico. Observe o texto a seguir.
+        </p>
+        <div class="small-frame">
+            <p>
+                Pessoas que tomam café da manhã todos os dias correm menos riscos de ter infecções,
+                conforme estudos realizados. As infecções são comuns em crianças que frequentam a escola
+                pela primeira vez. Por isso, a escola tem como filosofia o desenvolvimento de um processo de
+                ensino-aprendizagem construtivista.
+            </p>
+        </div>
+        <p>
+            Nesse texto, apesar da presença de elementos de ligação entre as sentenças, constata-se incoerências
+            entre elas.<br>
+            Os exemplos abaixo apresentam organizadores textuais e a explicação de suas relações com evidente
+            coesão e coerência.
+        </p>
+        <div class="flip-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>
+                            Relação de
+                            finalidade
+                        </h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Ele estudava
+                            bastante <strong>para
+                            que</strong> fosse
+                            aprovado no
+                            concurso.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>
+                            Relação de
+                            consequência
+                        </h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Ele estudou
+                            bastante <strong>de
+                            modo que</strong> foi
+                            aprovado no
+                            concurso.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>
+                            Relação de
+                            condição
+                        </h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Ele será
+                            aprovado
+                            no concurso
+                            <strong>se</strong> estudar
+                            bastante.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>
+                            Relação de
+                            tempo
+                        </h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Ele passará
+                            no concurso
+                            <strong>quando</strong>
+                            estudar
+                            bastante.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            A coesão deixa de existir quando a <strong>conjunção empregada não</strong> corresponde à <strong>relação existente entre
+            as orações do período</strong>. Nesse caso, a construção também perderá sua coerência, ou seja, seu sentido
+            lógico. Observe os exemplos abaixo:
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ </strong>Ele estudou bastante, <strong>por isso</strong> foi reprovado no concurso.
+                </span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Ele estudou muito, <strong>porém</strong> foi aprovado no concurso. (conjunção de oposição)
+                </span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Embora o ar esteja muito seco e o nível de poluição esteja alto, as pessoas estão com problemas respiratórios.
+                </span></li>
+            </ul>
+        </div>
+        <p>
+            Há falta de coesão e a consequente falta de coerência nas construções acima. Assim é fundamental
+            recapitular as relações possíveis no período composto, bem como as conjunções que exprimem essas
+            relações na construção de textos coerentes e coesos.
+        </p>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-green">Figura 1.</span> Regra Geral</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1738154230/eeenze9io79pxbdmubhp.png"
+                alt="Descrição da imagem" class="imagem-quadrov">
+            <!-- Fonte da imagem -->
+            <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte:</strong> Elaborado pela autora.</span></p>
+        </div>
+        <p>
+            Veja alguns exemplos da relação de sentido e organizador textual. Verifique também a pontuação <span class="fonte-menor">(clique
+            para expandir):</span>
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CAUSA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+        
+                <div class="acordeon-content">
+                    <p>
+                        ▸ Nelson será o novo presidente do Diretório Acadêmico da Área de
+                        Ciências Humanas <strong>porque</strong> conseguiu o maior número de votos. (O
+                        verbo será conjugado)
+                    </p>
+                    <p>
+                        ▸ Nelson será o novo presidente do Diretório Acadêmico da Área de
+                        Ciências Humanas <strong>em virtude de ter</strong> conseguido o maior número de
+                        votos. (O verbo assumirá a forma do infinitivo)
+                    </p>
+                    <p>
+                        ▸ <strong>Como</strong> conseguiu o maior número de votos, Nelson será o novo
+                        presidente do Diretório Acadêmico da Área de Ciências Humanas. (Se
+                        houver inversão de posição)
+                    </p>
+                    <p>
+                        ▸ Nelson será o novo presidente do Diretório Acadêmico da Área de
+                        Ciências Humanas <strong>porque</strong> conseguiu o maior número de votos. (Se
+                        não houver inversão de posição)
+                    </p>
+                    <p>
+                        ▸ <strong>Porque</strong> conseguiu o maior número de votos, Nelson será o novo
+                        presidente do Diretório Acadêmico da Área de Ciências Humanas.
+                        (Pode vir antes da oração principal)
+                    </p>
+                    <p>
+                        ▸ <strong>Em virtude de</strong> ter conseguido o maior número de votos, Nelson será o
+                        novo presidente do Diretório Acadêmico da Área de Ciências Humanas.
+                        (Pode vir antes da oração principal)
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    OPOSIÇÃO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>▸ Aquele filme ganhou o “Oscar”, <strong>mas</strong> não agradou a todos. (Posição fixa)</p>
+                    <p>▸ Aquele filme ganhou o “Oscar”, <strong>entretanto</strong> não agradou a todos.</p>
+                    <p>▸ Aquele filme ganhou o “Oscar”, não agradou <strong>entretanto</strong> a todos.</p>
+                    <p>▸ Aquele filme ganhou o “Oscar”, não agradou a todos, <strong>entretanto</strong>.</p>
+                    <p>▸ O Diretor perdoou o comportamento agressivo do aluno, <strong>mas</strong> ele
+                    sofrerá uma advertência escrita.</p>
+
+                </div>
+            </div>
+            <!-- Terceiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    OPOSIÇÃO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>▸ Aquele filme ganhou o “Oscar”, <strong>mas</strong> não agradou a todos. (Posição fixa)</p>
+                    <p>▸ Aquele filme ganhou o “Oscar”, <strong>entretanto</strong> não agradou a todos.</p>
+                    <p>▸ Aquele filme ganhou o “Oscar”, não agradou <strong>entretanto</strong> a todos.</p>
+                    <p>▸ Aquele filme ganhou o “Oscar”, não agradou a todos, <strong>entretanto</strong>.</p>
+                    <p>▸ O Diretor perdoou o comportamento agressivo do aluno, <strong>mas</strong> ele
+                    sofrerá uma advertência escrita.</p>
+                </div>
+            </div>
+            <!-- Quarto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CONCESSÃO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>▸ <strong>Embora</strong> o filme tenha ganhado o “Oscar”, não agradou a todos. (Verbo
+                    no modo subjuntivo)</p>
+                    <p>▸ <strong>Apesar de</strong> o filme ter ganhado o “Oscar”, não agradou a todos.</p>
+                    <p>▸ <strong>Embora</strong> o Diretor tenha perdoado o comportamento agressivo do aluno,
+                    ele sofrerá uma advertência escrita.</p>
+                </div>
+            </div>
+            <!-- Quinto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CONDIÇÃO (“Se” é o mais usado)
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>▸ <strong>Se</strong> você ganhar na Sena, poderá comprar a casa de seus sonhos.</p>
+                    <p>▸ <strong>Caso</strong> você ganhe na Sena, poderá comprar a casa de seus sonhos.</p>
+                    <p>▸ <strong>A menos que</strong> você estude, vai repetir de ano. (a não ser que) (sentido
+                    negativo)</p>
+                    <p>▸ <strong>Se</strong> você não estudar, vai repetir de ano.</p>
+                </div>
+            </div>
+            <!-- Sexto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    FINALIDADE (“Para” é o mais usado)
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>▸ José trabalha de dia <strong>para que</strong> possa estudar à noite.</p>
+                    <p>▸ José trabalha de dia <strong>para</strong> estudar à noite.</p>
+                    <p>▸ João brigou com José <strong>para</strong> tornar-se mais popular.</p>
+                    <p>▸ João brigou com José, <strong>com o objetivo de</strong> tornar-se mais popular.</p>
+                </div>
+            </div>
+            <!-- Sétimo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CONCLUSÃO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>▸ Suzana ganhou na Sena, <strong>logo</strong> comprará a casa de seus sonhos.</p>
+                    <p>▸ Suzana ganhou na Sena, <strong>de modo que</strong> comprará a casa de seus
+                    sonhos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Alerta Seção -->
+    <section class="alert-section">
+        <div class="alert-container">
+            <h1 class="alert-title">ATENÇÃO!</h1>
+            <p class="alert-paragraph">
+                É possível estabelecer uma articulação entre as ideias sem usar os organizadores textuais. Nesses caso,
+                podemos usar o <strong>gerúndio</strong>, porém com cuidado.
+            </p>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <!-- Tópico 6 -->
+        <div class="topico-texto">
+            <ul>
+                <li>▸ Conseguindo o maior número de votos, Nelson será o novo presidente ...... (causa)</li>
+                <li>▸ Ganhando na Sena, Suzana poderá comprar ..... (condição)</li>
+                <li>▸ João brigou com José, objetivando tornar-se .... (finalidade)</li>
+            </ul>
+        </div>
+        <p>
+            Outras formas são <strong>expressões</strong> que servem também para organizar o texto e estabelecer relações de
+            sentido entre as informações.
+        </p><br>
+        <h2 class="titulo-quadrov"><span class="text-green">Figura 2.</span> Expressões que indiquem Relevância - Acréscimo de Informação</h2>
+        <h4>EXPRESSÕES QUE INDIQUEM</h4>
+        <div class="flip-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>
+                            RELEVÂNCIA
+                        </h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Em primeiro lugar,
+                            em segundo lugar,
+                            posteriormente,
+                            finalmente
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>
+                            ACRÉSCIMO DE INFORMAÇÕES
+                        </h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Além disso, ainda
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte:</strong> Elaborado pela autora.</span></p>
+        <p class="fonte-quadrov"><span class="fonte-menor"><strong>Descrição de imagem:</strong> A imagem apresenta o título “Expressões que indiquem”. A figura está dividida em dois cards. O primeiro, encontra-se ao
+        lado
+        esquerdo da figura, possui o título “Relevância” e contém a lista de expressões: “Em primeiro lugar, em segundo lugar,
+        posteriormente, finalmente”. O
+        segundo, está posicionado ao lado direito da figura, com o título “Acréscimo de informações” e contém as expressões:
+        “Além disso, ainda”.</span></p>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Os conectivos transformam seus textos, criando fluidez e clareza. Aprenda a usar
+                    essas ferramentas de forma prática e eficiente, assistindo o vídeo abaixo!<br>
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/8Zm1x5WfJsQ?si=Fq1FGVevUScwNTI5"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>4. PARAGRAFAÇÃO</h1>
+        <p>
+            O parágrafo é a base da escrita, funcionando como uma unidade essencial de organização textual. Ele
+            não apenas desenvolve uma ideia central, mas também conecta informações de maneira lógica e fluida,
+            permitindo ao leitor compreender o raciocínio do autor. A seguir, você aprenderá sobre as características,
+            funções e estrutura do parágrafo, desde sua aplicação em textos simples até seu papel em contextos
+            acadêmicos mais complexos. Com exemplos práticos e análises detalhadas, será possível entender como
+            introdução, desenvolvimento e conclusão trabalham juntos para formar um parágrafo coeso e eficaz.
+        </p>
+        <h1>4.1 O PARÁGRAFO</h1>
+        <p>
+            O parágrafo é a <strong>menor unidade de um texto</strong>, é um microtexto e sua função é desenvolver uma ideia
+            central por meio de outras consideradas secundárias.
+        </p>
+        <p>
+            A extensão do parágrafo se estabelece na dependência de a <strong>ideia central</strong> necessitar ou não dos
+            esclarecimentos que lhe são fornecidos pelas <strong>secundárias</strong>. Assim, poderá haver parágrafos <strong>curtos</strong>, quando
+            a ideia central for suficientemente acessível ao leitor, bem como <strong>longos</strong>, quando houver necessidade
+            de acréscimo de elementos acessórios que facilitem a compreensão daquilo que se deseja transmitir. É
+            importante notar que ideias mais complexas podem e devem ser <strong>subdivididas</strong> em parágrafos diferentes.
+            Cada parágrafo representa uma ideia a ser desenvolvida em outros parágrafos.
+        </p>
+        <p>
+            Vale ressaltar que, <strong>na linguagem oral</strong>, o parágrafo inexiste como estrutura frasal, pois não precisamos
+            separar nossas ideias na fala, apesar de quase sempre fazermos a devida pausa articulatória.<br>
+            Na <strong>linguagem escrita</strong>, o parágrafo reverte-se de sua importância, uma vez que cada um deles representa
+            uma ideia a ser desenvolvida em outros parágrafos.
+        </p>
+        <p>
+            Pode-se também condensar a nossa <strong>ideia em um só parágrafo</strong>. Considera-se essa estrutura como
+            <strong>parágrafo-padrão</strong>, várias ideias num mesmo parágrafo. Ao redigi-lo, deve-se restringir, delimitar nossa
+            ideia sobre o assunto, objetivando as condensações. Esse tipo de parágrafo não apresenta recuo e é muito
+            usado em resumos de teses de mestrado, doutorado, artigos de revistas científicas, artigos acadêmicos,
+            monografias, projetos de pesquisa – quando houver necessidade de um resumo – na apresentação de
+            projetos em congressos etc. O parágrafo-padrão observa a estrutura seguinte, dentro do mesmo parágrafo:
+        </p>
+        <div class="flip-card-containerg">
+            <div class="flip-cardg">
+                <div class="flip-card-innerg">
+                    <div class="flip-card-frontg">
+                        <h4>
+                            INTRODUÇÃO
+                        </h4>
+                    </div>
+                    <div class="flip-card-backg">
+                        <h4>
+                            Abordagem da ideia
+                            central.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-cardg">
+                <div class="flip-card-innerg">
+                    <div class="flip-card-frontg">
+                        <h4>
+                            DESENVOLVIMENTO
+                        </h4>
+                    </div>
+                    <div class="flip-card-backg">
+                        <h4>
+                            Exposição das ideias
+                            apresentadas na
+                            introdução.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-cardg">
+                <div class="flip-card-innerg">
+                    <div class="flip-card-frontg">
+                        <h4>
+                            CONCLUSÃO
+                        </h4>
+                    </div>
+                    <div class="flip-card-backg">
+                        <h4>
+                            Retomada da ideia central.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><span class="text-green"><strong>Exemplo:</strong></span></p>
+        <div class="small-frameg">
+            <p>
+                <span class="fonte-menor"> Em nossos dias, a Universidade se subordina às exigências do mundo da
+                produção ou do consumo. Elas perderam aquela capacidade de gerar a dúvida
+                que enriquecia o espírito humano. Ao ‘produzir’ (e o verbo é moderno uso
+                acadêmico) técnicos, a educação universitária perde sua antiga finalidade, a
+                de fazer o homem pensar e encontrar respostas, sempre provisórias. Formam
+                se assim (fora as exceções que o talento salva), engenheiros sem Gramática,
+                médicos sem Ética, economistas sem História e professores sem Tempo e Modo.
+                Cada especialização se subdivide, quase ao infinito, em todas as disciplinas. Só
+                conseguem fugir a essa produção em série os bem-dotados, capazes de suprir,
+                por si mesmos, a incompetência da Instituição.</span>
+            </p>
+            <h5><span class="text-right">SANTAYANA, Mauro. Autômatos. Jornal da Tarde, 20/01/89.</span></h5>
+        </div>
+        <h1>4.2 A ESTRUTURA DO PARÁGRAFO</h1>
+        <p>Observe o parágrafo abaixo:</p>
+        <div class="small-frameg">
+            <p>
+                <span class="fonte-menor">Em consequência da II Guerra Mundial, as relações mundiais de poder viram
+                se drasticamente alteradas. <strong>(INTRODUÇÃO)</strong> A Alemanha, a Itália e o Japão
+                haviam sofrido uma derrota tão esmagadora que pareceram, durante algum
+                tempo, destinados a desempenhar um papel subalterno nos assuntos mundiais.
+                Oficialmente, a lista de grandes potências incluía cinco estados: União Soviética,
+                Estados Unidos, Grã-Bretanha, França e República da China. Eram esses os
+                Cinco Grandes que, ao chegar o fim da guerra, pareciam fadados a dominar o
+                mundo. Entretanto, a China logo se viu engolfada numa revolução comunista,
+                enquanto a Grã-Bretanha e a França se tornavam cada vez mais dependentes dos
+                Estados Unidos. <strong>(DESENVOLVIMENTO)</strong> Em resultado disso, durante dez anos,
+                depois de 1945, a comunidade das nações assumiu um caráter bipolar, com os
+                Estados Unidos e a União Soviética competindo pela supremacia e esforçando-se
+                por arrastar os estados restantes para sua órbita. <strong>(CONCLUSÃO)</strong></span>
+            </p>
+            <h5><span class="text-right">Fonte: BURNS, Edward Mcnall. História da Civilização Ocidental 2. [São Paulo]:<br> Globo, 1980.</span></h5>
+        </div><br><br>
+        <p>
+            O assunto do parágrafo acima são as relações de poder no mundo. Esse assunto é muito amplo e pode
+            ser abordado em vários aspectos. É por isso que o autor decidiu delimitá-lo: entre as várias possibilidades
+            de abordagem, ele optou por destacar as relações de poder no mundo após a II Guerra Mundial.
+        </p>
+        <p>
+            A partir daí, foi formulada uma opinião, um ponto de vista: houve uma alteração nas relações de poder
+            no mundo devido à II Guerra Mundial. Perceba que o ponto de vista está colocado em uma frase que
+            chamaremos de <strong>frase-núcleo:</strong> “Em consequência da II Guerra Mundial, as relações mundiais de poder
+            viram-se drasticamente alteradas”. <strong>A frase-núcleo, portanto, é aquela que contém a ideia central do
+            parágrafo.</strong> Normalmente ela é a primeira frase, mas poderia ser também uma frase no meio ou no final
+            do parágrafo. As demais frases constituem os argumentos que darão sustentação ao ponto de vista.
+            Normalmente ocorre também uma frase de conclusão.
+        </p>
+        <p>Assim, nesse parágrafo, podemos identificar os seguintes elementos:</p><br><br>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide"><strong>Assunto</strong></br></br>
+                    Relações de poder no mundo.
+                    <br>
+                </div>
+                <div class="slide"><strong>Delimitação do assunto</strong>
+                    </br></br>
+                    As relações de poder no mundo após a II Guerra Mundial.
+                </div>
+                <div class="slide"><strong>Objetivo</strong>
+                    <br><br>
+                    Mostrar que houve uma alteração de poder no mundo devido à II Guerra Mundial.
+                </div>
+                <div class="slide"><strong>Frase-núcleo:</strong>
+                    <br><br>
+                    Introdução do parágrafo
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div><br><br>
+        <p>
+            Pode-se dizer, então, que um parágrafo é uma unidade de composição escrita sobre um determinado
+            assunto, elaborada a fim de atingir um determinado objetivo. Essa unidade é estruturada por meio de um
+            conjunto de orações e apresenta, normalmente, três partes: introdução, desenvolvimento e conclusão.
+            Enfim, o parágrafo caracteriza todo tipo de escrita, desde um bilhete informal até uma monografia acadêmica.
+        </p>
+    </section>
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                Reforce os seus conhecimentos e entenda o passo a passo para criar parágrafos
+                claros, objetivos e coerentes. Este é o primeiro passo para escrever textos de
+                excelência!<br>
+            </p>
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/8Zm1x5WfJsQ?si=Fq1FGVevUScwNTI5"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>
+                    A paragrafação é mais do que uma técnica de organização textual; é uma ferramenta indispensável para
+                    garantir que as ideias sejam apresentadas com clareza, lógica e fluidez. Aliada à coerência e à coesão, ela
+                    desempenha um papel crucial na comunicação eficiente, ajudando o leitor a compreender o texto como
+                    uma unidade de sentido. Aprender a estruturar os parágrafos de forma adequada é um passo essencial
+                    para desenvolver habilidades de escrita mais refinadas.
+                </p>
+                <p>
+                    Por fim, ao dominar a paragrafação e os conceitos relacionados, ampliamos nossa capacidade de nos
+                    conectarmos com o público, criando textos que se comunicam de forma clara e envolvente. A prática
+                    dessa habilidade não apenas aprimora a escrita, mas também transforma o texto em um veículo poderoso
+                    de expressão e diálogo.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <!-- Conteúdo -->
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS BIBLIOGRÁFICAS</h1></br>
+                <p>ABREU, Antônio Suárez. Curso de Redação.3.ed.São Paulo: Ática, 1991.</p>
+                <p>ALMEIDA, Antonio Fernando de; ALMEIDA, Valéria Silva Rosa de. Português Básico: gramática, redação,
+                textos. 5.ed.São Paulo: Atlas, 2005.</p>
+                <p>ALMEIDA, Antonio Fernando de; ALMEIDA, Valéria Silva Rosa de. Português Instrumental: técnicas
+                básicas de redação. Itatiba, SP: Editora da Universidade São Francisco (EDUSF), 1997.</p>
+                <p>ANDRÉ, Hildebrando A. de. Curso de redação. São Paulo: Atlas, 1989.</p>
+                <p>MACEDO, José Armando. A redação do vestibular. São Paulo: Moderna, 1997.</p>
+                <p>TUFANO, Douglas. Estudos de redação.2.ed.revista e ampliada. São Paulo: Moderna, 1985.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        // Navbar
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+            });
+            // Fechar o menu ao clicar em um link
+            const links = document.querySelectorAll('.navbar ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.querySelector('.navbar ul');
+                    const icons = document.querySelectorAll('.menu-toggle i');
+
+                    // Fecha o menu ao clicar no link
+                    menu.classList.remove('show');
+                    icons[0].style.display = 'block'; // Exibe o ícone de menu
+                    icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                });
+            });
+            // Captura o elemento navbar
+            const navbar = document.querySelector('.navbar');
+
+            // Função que altera a opacidade da navbar
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                    navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                } else {
+                    navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                }
+            });
+        // Script para funcionalidade dos Tabs da nova seção (tabs-container2)
+            document.querySelectorAll('.tab2').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.getAttribute('data-tab');
+
+                    // Remove o conteúdo visível de todos os Tabs dentro da nova seção
+                    document.querySelectorAll('.tab-content2').forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Mostra o conteúdo do Tab clicado
+                    document.getElementById(targetId).style.display = 'block';
+
+                    // Remove a classe 'active' de todos os Tabs dentro da nova seção
+                    document.querySelectorAll('.tab2').forEach(t => {
+                        t.classList.remove('active');
+                    });
+
+                    // Adiciona a classe 'active' ao Tab clicado
+                    tab.classList.add('active');
+                });
+            });
+            // Script para funcionalidade dos Tabs da nova seção (tabs-container2)
+                document.querySelectorAll('.tab3').forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const targetId = tab.getAttribute('data-tab');
+
+                        // Remove o conteúdo visível de todos os Tabs dentro da nova seção
+                        document.querySelectorAll('.tab-content3').forEach(content => {
+                            content.style.display = 'none';
+                        });
+
+                        // Mostra o conteúdo do Tab clicado
+                        document.getElementById(targetId).style.display = 'block';
+
+                        // Remove a classe 'active' de todos os Tabs dentro da nova seção
+                        document.querySelectorAll('.tab3').forEach(t => {
+                            t.classList.remove('active');
+                        });
+
+                        // Adiciona a classe 'active' ao Tab clicado
+                        tab.classList.add('active');
+                    });
+                });
+                
+                    // Função para abrir o modal com o vídeo
+                        function openVideoModal(element) {
+                            var videoModal = document.getElementById('videoModal');
+                            var iframe = document.getElementById('videoIframe');
+
+                            // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                            var videoLink = element.getAttribute("data-video");
+
+                            // Define o src do iframe com o link do vídeo
+                            iframe.src = videoLink;
+
+                            // Exibe o modal
+                            videoModal.style.display = "flex";
+                        }
+
+                        // Função para fechar o modal
+                        function closeVideoModal() {
+                            var videoModal = document.getElementById('videoModal');
+                            var iframe = document.getElementById('videoIframe');
+
+                            // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                            iframe.src = "";
+                            videoModal.style.display = "none";  // Fecha o modal
+                        }
+
+                        // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+                        document.getElementById('videoModal').addEventListener('click', function (event) {
+                            // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                            if (event.target === this) {
+                                closeVideoModal();
+                            }
+                        });
+    // Script para funcionalidade do acordeon
+    document.querySelectorAll('.acordeon-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display === 'block';
+
+            // Apenas abre ou fecha o acordeon clicado
+            content.style.display = isVisible ? 'none' : 'block';
+
+            // Alternar a classe da seta
+            const icon = header.querySelector('.acordeon-icon');
+            if (icon) {
+                icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+            }
+        });
+    });
+    // Script para funcionalidade do novo accordion
+    document.querySelectorAll('.accordion-header-diferente').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display === 'block';
+
+            // Apenas abre ou fecha o accordion clicado
+            content.style.display = isVisible ? 'none' : 'block';
+
+            // Alternar a classe da seta
+            const icon = header.querySelector('.accordion-icon-diferente');
+            if (icon) {
+                icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+            }
+        });
+    });
+    function initializeSlider(sliderSelector) {
+        const sliderContainer = document.querySelector(sliderSelector);
+        const slider = sliderContainer.querySelector('.slider');
+        const slides = sliderContainer.querySelectorAll('.slide');
+        const leftArrow = sliderContainer.querySelector('.left-arrow');
+        const rightArrow = sliderContainer.querySelector('.right-arrow');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const totalSlides = slides.length;
+
+            if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        leftArrow.addEventListener('click', () => showSlide(currentIndex - 1));
+        rightArrow.addEventListener('click', () => showSlide(currentIndex + 1));
+
+        // Inicializa o slider
+        showSlide(currentIndex);
+    }
+
+    // Exemplo de inicialização de sliders
+    initializeSlider('.slider-container'); // Slider 1
+    initializeSlider('.slider-container-2'); // Slider 2
+
+    
+    </script>
+</body>
+</html>
