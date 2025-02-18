@@ -373,7 +373,7 @@
             font-family: inherit; /* Herda a fonte do parágrafo */
             color: inherit; /* Herda a cor do parágrafo */
             font-size: 16px;
-            
+            margin: 0 20px;
         }
         .text-green {
             color: #015A42;
@@ -405,7 +405,7 @@
             text-align: justify;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -414,29 +414,29 @@
         @media (max-width: 768px) {
             .secao1 h1 {
                 font-size: 1.5rem;
-                text-align: center;
+                text-align: left;
             }
 
             .secao1 p {
-                font-size: 0.6rem;
+                font-size: 0.9rem;
                 line-height: 1.4;
             }
 
         }
         @media (max-width: 480px) {
             .secao1 h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .secao1 p {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             } 
         }
         /* Tabs container */
         .tabs-container2 {
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
+            margin: 20px auto;
             width: calc(90% - 10px); /* Subtrai o gap total da largura */
             max-width: 800px; /* Limite máximo */
             font-weight: bold;
@@ -615,51 +615,49 @@
             text-decoration: underline;
         }
         .small-frame {
-    border: 2px solid #9F43BE;
-    border-radius: 10px;
-    padding: 15px 20px; /* Maior espaçamento interno para melhor legibilidade */
-    width: 80%; /* Usa um tamanho mais fluido */
-    max-width: 700px;
-    background-color: #FFF;
-    height: auto;
-    margin: 30px auto; /* Centraliza e ajusta margem superior */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
-}
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            width: 80%; /* Usa um tamanho mais fluido */
+            max-width: 700px;
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
 
-.small-frame p {
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    color: #000;
-    line-height: 1.8; /* Maior espaçamento entre linhas */
-    text-align: justify;
-    margin: 0; /* Remove margem lateral desnecessária */
-    padding: 5px 10px; /* Melhor espaçamento interno */
-}
+        .small-frame p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8; /* Maior espaçamento entre linhas */
+            text-align: justify;
+            margin: 20px auto;
+        }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .small-frame {
-        width: 90%; /* Mais largura para ocupar melhor a tela */
-        padding: 15px;
-    }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frame {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
 
-    .small-frame p {
-        font-size: 14px; /* Mantém boa leitura */
-        line-height: 1.7;
-    }
-}
+            .small-frame p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
 
-@media (max-width: 480px) {
-    .small-frame {
-        width: 95%; /* Usa quase toda a tela para não ficar apertado */
-        padding: 10px;
-    }
+        @media (max-width: 480px) {
+            .small-frame {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
 
-    .small-frame p {
-        font-size: 13px; /* Mantém o texto confortável */
-        line-height: 1.6;
-    }
-}
+            .small-frame p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
 
         .small-frameg {
             border: 2px solid #015A42;
@@ -734,7 +732,7 @@
             text-align: justify;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -743,7 +741,7 @@
         @media (max-width: 768px) {
             .secao2 h1 {
                 font-size: 1.5rem;
-                text-align: center;
+                text-align: left;
             }
 
             .secao2 p {
@@ -754,11 +752,11 @@
         }
         @media (max-width: 480px) {
             .secao2 h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .secao2 p {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             } 
         }
         /* Container dos novos accordions */
@@ -1046,7 +1044,8 @@
             display: flex;
             gap: 10px; /* Espaçamento entre os cards */
             justify-content: center;
-            padding: 10px;
+            margin: 10px auto 20px auto; /* Menos margem superior, mais margem inferior */
+            padding-bottom: 20px; /* Garante que o espaçamento inferior seja visível */
         }
 
         /* Estilo geral do flip card */
@@ -1105,42 +1104,43 @@
             transform: rotateY(180deg);
         }
        @media (max-width: 768px) {
-    .flip-card-containerg {
-        display: flex;
-        flex-wrap: wrap; /* Permite a quebra de linha */
-        justify-content: center; /* Centraliza os cards */
-        gap: 10px; /* Espaçamento entre os cards */
-        padding: 10px;
-        width: 100%; /* Garante que o container não estoure a tela */
-        box-sizing: border-box; /* Evita que padding afete a largura total */
+        .flip-card-containerg {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .flip-cardg {
+            width: 45%; /* Cada card ocupa 45% da largura, cabendo dois por linha */
+            max-width: 160px; /* Mantém um limite de tamanho */
+            margin: 5px;
+        }
+        .flip-card-frontg,
+        .flip-card-backg {
+            font-size: 12px; /* Reduz o tamanho do texto */
+            padding: 8px; /* Ajusta o espaçamento interno */
+        }
     }
 
-    .flip-cardg {
-        width: 45%; /* Cada card ocupa 45% da largura, cabendo dois por linha */
-        max-width: 160px; /* Mantém um limite de tamanho */
-        margin: 5px;
-    }
-}
+    @media (max-width: 768px) {
+        .flip-card-container {
+            flex-wrap: wrap; /* Permite que os cards quebrem linha */
+            justify-content: center; /* Centraliza os itens */
+            gap: 15px; /* Aumenta o espaçamento entre os cards */
+        }
 
-@media (max-width: 768px) {
-    .flip-card-container {
-        flex-wrap: wrap; /* Permite que os cards quebrem linha */
-        justify-content: center; /* Centraliza os itens */
-        gap: 15px; /* Aumenta o espaçamento entre os cards */
-    }
+        .flip-card {
+            width: 120px; /* Reduz a largura do card */
+            height: 120px; /* Reduz a altura do card */
+            margin: 5px; /* Ajusta as margens */
+        }
 
-    .flip-card {
-        width: 120px; /* Reduz a largura do card */
-        height: 120px; /* Reduz a altura do card */
-        margin: 5px; /* Ajusta as margens */
+        .flip-card-front,
+        .flip-card-back {
+            font-size: 12px; /* Reduz o tamanho do texto */
+            padding: 8px; /* Ajusta o espaçamento interno */
+        }
     }
-
-    .flip-card-front,
-    .flip-card-back {
-        font-size: 12px; /* Reduz o tamanho do texto */
-        padding: 8px; /* Ajusta o espaçamento interno */
-    }
-}
 
         /* Estilo para os tópicos de texto */
         .topico-texto {
@@ -1165,7 +1165,7 @@
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             display: flex;
             align-items: flex-start; /* Alinha o texto com o ícone */
             white-space: pre-wrap; /* Preserva espaços e quebras de linha */
@@ -1187,15 +1187,14 @@
             }
 
             .topico-texto ul li {
-                font-size: 14px;
+                font-size: 18px;
             }
         }
         /* Quadro com borda violeta */
         .quadrov {
-            padding: 20px; /* Espaçamento interno */
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Largura máxima */
-            margin-bottom: 30px; /* Espaçamento inferior */
+            margin: 20px auto;
             text-align: center; /* Centraliza o conteúdo */
         }
 
@@ -1204,7 +1203,6 @@
             font-size: 18px;
             font-family: 'Roboto', sans-serif;
             color: #333; /* Verde */
-            margin-bottom: 20px;
         }
 
         /* Imagem dentro do quadro */
@@ -1212,7 +1210,6 @@
             width: 100%; /* Imagem ocupa toda a largura disponível */
             max-width: 700px; /* Limite máximo da largura */
             height: auto; /* Mantém a proporção */
-            margin-bottom: 15px;
         }
 
         /* Fonte da imagem */
@@ -1220,7 +1217,6 @@
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
             color: #555; /* Cinza escuro */
-            margin-bottom: 10px;
             text-align: left;
         }
 
@@ -1408,9 +1404,10 @@
         /* Contêiner dos flip cards */
         .flip-card-containerg {
             display: flex;
-            gap: 10px; /* Espaçamento entre os cards */
+            gap: 10px;
             justify-content: center;
-            padding: 10px;
+            margin: 20px auto 20px auto;
+            padding-bottom: 20px;
         }
 
         /* Estilo geral do flip card */
